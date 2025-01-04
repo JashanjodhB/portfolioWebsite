@@ -1,0 +1,10 @@
+[
+  {
+    "title": "Portfolio Website",
+    "imageSrc": "projects/project.png",
+    "description": "This is the website that you are on right now.",
+    "skills": ["React", "Javascript", "HTML/CSS"],
+    "demo": "https://www.jashanjodhb.com",
+    "source": "https://github.com/JashanjodhB/portfolio"
+  }
+]
