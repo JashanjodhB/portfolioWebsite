@@ -11,7 +11,7 @@ export const Hero = () => {
         </p>
         <a className= {styles.contactBtn} href='#contact'>Contact Me</a>
     </div>
-    <img className={styles.heroImg} src='../../assets/hero/heroImage.png' alt='Image of me'/>
+    <img className={styles.heroImg} src='src/assets/hero/heroImage.png' alt='Image of me'/>
     <div className={styles.topBlur}/>
     <div className={styles.bottomblur}/>
 
