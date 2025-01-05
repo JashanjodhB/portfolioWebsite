@@ -3,7 +3,7 @@ import styles from "./Projects.module.css";
 import skills from "../../data/skills.json";
 import projects from "../../data/projects.json";
 import { ProjectCard } from "./ProjectCard";
-
+import { getImageUrl } from "../../utils";
 
 
 export const Projects = () => {
@@ -16,7 +16,7 @@ export const Projects = () => {
             return (
               <div key={id} className={styles.skill}>
                 <div className={styles.skillImageContainer}>
-                  <img src={`../../assets/${skill.imageSrc}`} alt={skill.title} className={styles.image} />
+                  <img src={skill.imageSrc} alt={skill.title} className={styles.image} />
                 </div>
                 <p>{skill.title}</p>
               </div>

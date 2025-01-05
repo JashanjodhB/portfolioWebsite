@@ -10,15 +10,15 @@ export const Contact = () => {
       </div>
       <ul className={styles.links}>
         <li className={styles.link}>
-          <img src='../../assets/contact/emailIcon.png' alt='Email Icon'/>
+          <img src={("/emailIcon.png")} alt='Email Icon'/>
           <a href='mailto:jashanjodhb@gmail.com'>jashanjodhb@gmail.com</a>
         </li>
         <li className={styles.link}>
-          <img src='../../assets/contact/linkedinIcon.png' alt='LinkedIn Icon'/>
+          <img src={("/linkedinIcon.png")} alt='LinkedIn Icon'/>
           <a href='https://www.linkedin.com/in/jashanjodh-bajwa-31894231b'>https://www.linkedin.com/in/jashanjodh-bajwa-31894231b</a>
         </li>
         <li className={styles.link}>
-          <img src='../../assets/contact/githubIcon.png' alt='Github Icon'/>
+          <img src={"/githubIcon.png"} alt='Github Icon'/>
           <a href='https://github.com/JashanjodhB'>https://github.com/JashanjodhB</a>
         </li>
       </ul>

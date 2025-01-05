@@ -1,35 +1,35 @@
 [
     {
       "title": "Java",
-      "imageSrc": "skills/java.png"
+      "imageSrc": "/java.png"
     },
     {
       "title": "Python",
-      "imageSrc": "skills/python.png"
+      "imageSrc": "/python.png"
     },
     {
       "title": "C++",
-      "imageSrc": "skills/cpp.png"
+      "imageSrc": "/cpp.png"
     },
     {
       "title": "HTML",
-      "imageSrc": "skills/html.png"
+      "imageSrc": "/html.png"
     },
     {
       "title": "CSS",
-      "imageSrc": "skills/css.png"
+      "imageSrc": "/css.png"
     },
     {
       "title": "React",
-      "imageSrc": "skills/react.png"
+      "imageSrc": "/react.png"
     },
     {
       "title": "Node",
-      "imageSrc": "skills/node.png"
+      "imageSrc": "/node.png"
     },
     {
       "title": "Figma",
-      "imageSrc": "skills/figma.png"
+      "imageSrc": "/figma.png"
     }
     
   ]
