@@ -16,7 +16,7 @@ export const Projects = () => {
             return (
               <div key={id} className={styles.skill}>
                 <div className={styles.skillImageContainer}>
-                  <img src={`src/assets/${skill.imageSrc}`} alt={skill.title} className={styles.image} />
+                  <img src={`../../assets/${skill.imageSrc}`} alt={skill.title} className={styles.image} />
                 </div>
                 <p>{skill.title}</p>
               </div>
