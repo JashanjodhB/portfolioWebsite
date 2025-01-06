@@ -6,7 +6,10 @@ export const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-        <a className={styles.title} href='/'>Jashanjodh Bajwa</a>
+        
+        <a href='/'>
+          <img  className={styles.logo} src='/logo.svg' />
+        </a>
         <div className={styles.menu}>
 
         <img

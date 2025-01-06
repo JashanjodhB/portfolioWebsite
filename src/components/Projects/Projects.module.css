@@ -38,6 +38,13 @@
     align-items: center;
     gap: 11px;
   }
+
+  .descriptors{
+    font-size: 20px;
+    color: var(--color-text);
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
   
   .skillImageContainer {
     background-color: var(--color-secondary);
