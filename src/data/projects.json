@@ -3,7 +3,7 @@
     "title": "Portfolio Website",
     "imageSrc": "/project.png",
     "description": "This is the website that you are on right now.",
-    "skills": ["React", "Javascript", "HTML/CSS"],
+    "skills": ["React","TypeScript", "Javascript", "HTML/CSS"],
     "link": "https://www.jashanjodhb.com",
     "github": "https://github.com/JashanjodhB/portfolio"
   }

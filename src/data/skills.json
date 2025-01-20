@@ -12,6 +12,14 @@
       "imageSrc": "/cpp.png"
     },
     {
+      "title": "TypeScript",
+      "imageSrc": "/TS.png"
+    },
+    {
+      "title": "JavaScript",
+      "imageSrc": "/JS.png"
+    },
+    {
       "title": "HTML",
       "imageSrc": "/html.png"
     },
@@ -22,14 +30,6 @@
     {
       "title": "React",
       "imageSrc": "/react.png"
-    },
-    {
-      "title": "Node",
-      "imageSrc": "/node.png"
-    },
-    {
-      "title": "Figma",
-      "imageSrc": "/figma.png"
     }
     
   ]
