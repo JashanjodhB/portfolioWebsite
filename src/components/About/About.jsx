@@ -14,8 +14,8 @@ export const About = () => {
                 <li className={styles.aboutItem}>
                     <FontAwesomeIcon icon={faGraduationCap} className={styles.icons}/>
                     <div className={styles.aboutItemText}>
-                        <h3>Student</h3>
-                        <p>I am currently a freshman at Texas A&M University planning on studying computer science.</p>
+                        <h3>Student Researcher</h3>
+                        <p>I am currently a freshman at Texas A&M University studying computer science and working in the AGGIES Lab.</p>
                     </div>
                 </li>
                 <li className={styles.aboutItem}>
@@ -29,7 +29,7 @@ export const About = () => {
                     <FontAwesomeIcon icon={faBook} className={styles.icons}/>
                     <div className={styles.aboutItemText}>
                         <h3>Hobbies</h3>
-                        <p>Some of my hobbies include video games, reading fantasy/Sci-fi, playing music, and going on walks.</p>
+                        <p>Some of my current hobbies are reading, playing music, playing video games,and playing basketball.</p>
                     </div>
                 </li>
             </ul>
