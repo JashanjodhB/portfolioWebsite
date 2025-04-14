@@ -22,7 +22,7 @@ export const About = () => {
                     <FontAwesomeIcon icon={faServer} className={styles.icons}/>
                     <div className={styles.aboutItemText}>
                         <h3>Interests</h3>
-                        <p>I'm currently intrested mainly in the areas cybersecurity and data science.</p>
+                        <p>I'm currently intrested mainly in the areas of cybersecurity and data science.</p>
                     </div>
                 </li>
                 <li className={styles.aboutItem}>
