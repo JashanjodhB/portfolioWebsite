@@ -3,7 +3,6 @@ import styles from "./Projects.module.css";
 import skills from "../../data/skills.json";
 import projects from "../../data/projects.json";
 import { ProjectCard } from "./ProjectCard";
-import { getImageUrl } from "../../utils";
 
 
 export const Projects = () => {

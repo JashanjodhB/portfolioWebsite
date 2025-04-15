@@ -15,14 +15,15 @@ export const About = () => {
                     <FontAwesomeIcon icon={faGraduationCap} className={styles.icons}/>
                     <div className={styles.aboutItemText}>
                         <h3>Student Researcher</h3>
-                        <p>I am currently a freshman at Texas A&M University studying computer science and working in the AGGIES Lab.</p>
+                        <p>I am currently a freshman at Texas A&M University studying computer science and working in the <a className={styles.link} href='https://shreyas.engr.tamu.edu/aggies/' target='_blank' rel='noreferrer'>AGGIES Lab</a> as a student researcher.
+                        </p>
                     </div>
                 </li>
                 <li className={styles.aboutItem}>
                     <FontAwesomeIcon icon={faServer} className={styles.icons}/>
                     <div className={styles.aboutItemText}>
                         <h3>Interests</h3>
-                        <p>I'm currently intrested mainly in the areas of cybersecurity and data science.</p>
+                        <p>I'm currently intrested mainly in the areas of cybersecurity, micro nuclear reactor security and data science.</p>
                     </div>
                 </li>
                 <li className={styles.aboutItem}>
