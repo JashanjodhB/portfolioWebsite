@@ -15,7 +15,7 @@ export const About = () => {
                     <FontAwesomeIcon icon={faGraduationCap} className={styles.icons}/>
                     <div className={styles.aboutItemText}>
                         <h3>Student Researcher</h3>
-                        <p>I am currently a freshman at Texas A&M University studying computer science and working in the <a className={styles.link} href='https://shreyas.engr.tamu.edu/aggies/' target='_blank' rel='noreferrer'>AGGIES Lab</a> as a student researcher.
+                        <p>I am currently a freshman at Texas A&M University studying computer science and working in the <a className={styles.link} href='https://www.aggieslab.org/' target='_blank' rel='noreferrer'>AGGIES Lab</a> as a student researcher.
                         </p>
                     </div>
                 </li>
