@@ -3,8 +3,16 @@
     "title": "Portfolio Website",
     "imageSrc": "/project.png",
     "description": "This is the website that you are on right now.",
-    "skills": ["React","TypeScript", "Javascript", "HTML/CSS"],
+    "skills": ["React","Javascript", "HTML/CSS"],
     "link": "https://www.jashanjodhb.com",
     "github": "https://github.com/JashanjodhB/portfolioWebsite"
+  },
+  {
+    "title": "Congress Finances Map",
+    "imageSrc": "/congress.jpg",
+    "description": "An interactive map that shows the scrapped financial information of congress members.",
+    "skills": ["Python","TypeScript", "HTML/CSS"],
+    "link": "congress-at6.pages.dev",
+    "github": "https://github.com/JashanjodhB/congress"
   }
 ]
