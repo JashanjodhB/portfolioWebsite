@@ -1,18 +1,16 @@
 [
   {
-    "title": "Portfolio Website",
-    "imageSrc": "/project.png",
-    "description": "This is the website that you are on right now.",
-    "skills": ["React","Javascript", "HTML/CSS"],
-    "link": "https://www.jashanjodhb.com",
-    "github": "https://github.com/JashanjodhB/portfolioWebsite"
+    "title": "Screenshot To PDF",
+    "imageSrc": "/sc.png",
+    "description": "A C++ desktop app made using Qt that allows a user to take multiple screenshots and convert them into a single PDF file.",
+    "skills": ["C++","Qt"],
+    "github": "https://github.com/JashanjodhB/ScreenshotApp"
   },
   {
-    "title": "Congress Finances Map",
-    "imageSrc": "/congress.jpg",
-    "description": "An interactive map that shows the scrapped financial information of congress members.",
-    "skills": ["Python","TypeScript", "HTML/CSS"],
-    "link": "congress-at6.pages.dev",
-    "github": "https://github.com/JashanjodhB/congress"
+    "title": "Reddit Market Sentiment Analyzer",
+    "imageSrc": "/reddit.png",
+    "description": "A Python tool that collects and analyzed WallStreeBets comments to determine their sentiment using VADER and displays the sentiment with real market data.",
+    "skills": ["Python", "VADER"],
+    "github": "https://github.com/JashanjodhB/wsbPredictionAccuracy"
   }
 ]
