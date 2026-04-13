@@ -1,67 +1,66 @@
 @import "../../vars.css";
 
 .container {
-    margin-top: 76px;
-    color: var(--color-text);
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-  
-  .title {
-    font-size: 35px;
-    font-weight: 700;
-    letter-spacing: 1.75px;
-    text-transform: uppercase;
-  }
-  
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 32px 0 0;
+  scroll-margin-top: 100px;
+}
+
+.header {
+  max-width: 760px;
+}
+
+.eyebrow {
+  color: var(--color-accent-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.26em;
+  font-size: 0.82rem;
+}
+
+.title {
+  margin-top: 14px;
+  font-size: clamp(2rem, 4vw, 3.15rem);
+  line-height: 1.08;
+  color: var(--color-text-primary);
+}
+
+.description {
+  margin-top: 18px;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+.toolbox {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.toolbox span {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(83, 144, 217, 0.1);
+  border: 1px solid rgba(100, 223, 223, 0.12);
+  color: var(--color-text-secondary);
+}
+
+.projects {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+@media screen and (max-width: 980px) {
   .projects {
-    margin-top: 37px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    width: 100%;
+    grid-template-columns: 1fr;
   }
+}
 
-  .skills {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 37px;
+@media screen and (max-width: 700px) {
+  .container {
+    width: min(1120px, calc(100% - 32px));
   }
-  
-  .skill {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 11px;
-  }
-
-  .descriptors{
-    font-size: 20px;
-    color: var(--color-text);
-    padding-top: 10px;
-    padding-bottom: 5px;
-  }
-  
-  .skillImageContainer {
-    background-color: var(--color-secondary);
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 120px;
-    height: 120px;
-  }
-  
-  .skillImageContainer img {
-    width: 75px;
-  }
-  
-  .skill p {
-    font-size: 25px;
-    font-family: var(--font-roboto);
-    font-weight: 500;
-  }
+}

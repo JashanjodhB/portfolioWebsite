@@ -1,0 +1,98 @@
+@import "../../vars.css";
+
+.container {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 32px 0 0;
+  scroll-margin-top: 100px;
+}
+
+.header {
+  max-width: 720px;
+}
+
+.eyebrow {
+  color: var(--color-accent-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.26em;
+  font-size: 0.82rem;
+}
+
+.title {
+  margin-top: 14px;
+  font-size: clamp(2rem, 4vw, 3.15rem);
+  line-height: 1.08;
+}
+
+.grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.serviceCard,
+.personalCard {
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-strong);
+  border-radius: 28px;
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(24px);
+}
+
+.serviceCard {
+  padding: 24px;
+}
+
+.serviceCard h3 {
+  font-size: 1.15rem;
+}
+
+.serviceCard p {
+  margin-top: 14px;
+  line-height: 1.75;
+  color: var(--color-text-muted);
+}
+
+.personalCard {
+  margin-top: 24px;
+}
+
+.personalCopy {
+  padding: 28px;
+}
+
+.personalCopy h3 {
+  margin-top: 14px;
+  font-size: 1.6rem;
+}
+
+.personalCopy ul {
+  margin-top: 18px;
+  padding-left: 20px;
+  display: grid;
+  gap: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+@media screen and (max-width: 950px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    width: min(1120px, calc(100% - 32px));
+  }
+
+  .serviceCard,
+  .personalCard {
+    border-radius: 22px;
+  }
+
+  .personalCopy {
+    padding: 24px;
+  }
+}

@@ -1,27 +1,27 @@
-import React from 'react';
 import styles from "./Contact.module.css";
+import { contactLinks } from "../../data/profile";
 
 export const Contact = () => {
   return (
-    <footer id='contact' className={styles.container}>
-      <div className={styles.text}>
-        <h2 >Contact</h2>
-        <p>Reach out to me through any of following:</p>
+    <footer id="contact" className={styles.container}>
+      <div className={styles.panel}>
+        <div className={styles.text}>
+          <p className={styles.eyebrow}>Contact</p>
+          <h2>Open to internships, research, and engineering roles.</h2>
+          <p>I&apos;m especially interested in cybersecurity, machine learning, and systems work.</p>
+        </div>
+
+        <ul className={styles.links}>
+          {contactLinks.map((link) => (
+            <li className={styles.link} key={link.label}>
+              <span>{link.label}</span>
+              <a className="textLink" target="_blank" rel="noreferrer" href={link.href}>
+                {link.value}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
-      <ul className={styles.links}>
-        <li className={styles.link}>
-          <img src={("/emailIcon.png")} alt='Email Icon'/>
-          <a target='_blank' href='mailto:jashanjodhb@gmail.com'>jashanjodhb@gmail.com</a>
-        </li>
-        <li className={styles.link}>
-          <img src={("/linkedinIcon.png")} alt='LinkedIn Icon'/>
-          <a target='_blank' href='https://www.linkedin.com/in/jashanjodh-bajwa'>LinkedIn</a>
-        </li>
-        <li className={styles.link}>
-          <img src={"/githubIcon.png"} alt='Github Icon'/>
-          <a target='_blank' href='https://github.com/JashanjodhB'>Github</a>
-        </li>
-      </ul>
     </footer>
   );
 };

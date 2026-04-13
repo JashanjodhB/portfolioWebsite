@@ -1,39 +1,29 @@
-import React from "react";
 import styles from "./Projects.module.css";
-import skills from "../../data/skills.json";
 import projects from "../../data/projects.json";
 import { ProjectCard } from "./ProjectCard";
-
+import { techGroups } from "../../data/profile";
 
 export const Projects = () => {
+  const projectTools = techGroups.slice(0, 2).flatMap((group) => group.items);
+
   return (
     <section className={styles.container} id="projects">
-      <h2 className={styles.title}>Projects</h2>
-      <p className={styles.descriptors} >Technical Skills:</p>
-      <div className={styles.skills}>
-          {skills.map((skill, id) => {
-            return (
-              <div key={id} className={styles.skill}>
-                <div className={styles.skillImageContainer}>
-                  <img src={skill.imageSrc} alt={skill.title} className={styles.image} />
-                </div>
-                <p>{skill.title}</p>
-              </div>
-            );
-          })}
-        </div>
+      <div className={styles.header}>
+        <p className={styles.eyebrow}>Selected Work</p>
+        <h2 className={styles.title}>Projects with clear technical outcomes.</h2>
+      </div>
 
-        
-      <p className={styles.descriptors} >Coding Projects:</p>
+      <div className={styles.toolbox}>
+        {projectTools.map((tool) => (
+          <span key={tool}>{tool}</span>
+        ))}
+      </div>
 
-      <div className={styles.projects}>{
-        projects.map((project,id)=> {
-          return (
-            <ProjectCard key={id} project={project}/>
-          );
+      <div className={styles.projects}>
+        {projects.map((project) => {
+          return <ProjectCard key={project.title} project={project} />;
         })}
-        </div>
+      </div>
     </section>
   );
-
 };

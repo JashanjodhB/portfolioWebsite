@@ -1,40 +1,41 @@
-import React from 'react'
-import styles from "./About.module.css"
-import { faBook,faServer, faGraduationCap } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import styles from "./About.module.css";
+import { faCodeBranch, faGlobe, faGraduationCap } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { personalHighlights } from "../../data/profile";
 
 export const About = () => {
   return (
-    <section className={styles.container} id='about'>
-        <h2 className={styles.title}>About</h2>
-        <div className={styles.content}>
-            <img className={styles.aboutImage} src={"/aboutImage.png"} alt='A picture of me' />
+    <section className={styles.container} id="about">
+      <div className={styles.copy}>
+        <p className={styles.eyebrow}>About Me</p>
+        <h2 className={styles.title}>Research-driven engineering, built to ship.</h2>
 
-            <ul className={styles.aboutItems}>
-                <li className={styles.aboutItem}>
-                    <FontAwesomeIcon icon={faGraduationCap} className={styles.icons}/>
-                    <div className={styles.aboutItemText}>
-                        <h3>Student Researcher</h3>
-                        <p>I am currently a freshman at Texas A&M University studying computer science and working in the <a className={styles.link} href='https://www.aggieslab.org/' target='_blank' rel='noreferrer'>AGGIES Lab</a> as a student researcher.
-                        </p>
-                    </div>
-                </li>
-                <li className={styles.aboutItem}>
-                    <FontAwesomeIcon icon={faServer} className={styles.icons}/>
-                    <div className={styles.aboutItemText}>
-                        <h3>Interests</h3>
-                        <p>I'm currently intrested mainly in the areas of cybersecurity, micro nuclear reactor security and data science.</p>
-                    </div>
-                </li>
-                <li className={styles.aboutItem}>
-                    <FontAwesomeIcon icon={faBook} className={styles.icons}/>
-                    <div className={styles.aboutItemText}>
-                        <h3>Hobbies</h3>
-                        <p>Some of my current hobbies are reading, playing music, playing video games,and playing basketball.</p>
-                    </div>
-                </li>
-            </ul>
+        <div className={styles.items}>
+          <article className={styles.item}>
+            <FontAwesomeIcon icon={faGraduationCap} className={styles.icon} />
+            <div>
+              <h3>{personalHighlights[0].title}</h3>
+              <p>{personalHighlights[0].description}</p>
+            </div>
+          </article>
+
+          <article className={styles.item}>
+            <FontAwesomeIcon icon={faCodeBranch} className={styles.icon} />
+            <div>
+              <h3>{personalHighlights[1].title}</h3>
+              <p>{personalHighlights[1].description}</p>
+            </div>
+          </article>
+
+          <article className={styles.item}>
+            <FontAwesomeIcon icon={faGlobe} className={styles.icon} />
+            <div>
+              <h3>{personalHighlights[2].title}</h3>
+              <p>{personalHighlights[2].description}</p>
+            </div>
+          </article>
         </div>
+      </div>
     </section>
-  )
-}
+  );
+};

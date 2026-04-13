@@ -1,0 +1,476 @@
+@import "../../vars.css";
+
+.card {
+  --pointer-x: 0;
+  --pointer-y: 0;
+
+  position: relative;
+  width: min(34rem, 100%);
+  min-height: 27rem;
+  overflow: hidden;
+  border-radius: 34px;
+  border: 1px solid rgba(128, 255, 219, 0.14);
+  background:
+    radial-gradient(circle at 16% 18%, rgba(128, 255, 219, 0.1), transparent 20%),
+    radial-gradient(circle at 84% 20%, rgba(72, 191, 227, 0.16), transparent 24%),
+    linear-gradient(180deg, rgba(8, 18, 49, 0.92), rgba(2, 8, 24, 0.9));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 26px 70px rgba(2, 10, 28, 0.35);
+  backdrop-filter: blur(22px);
+  perspective: 1200px;
+  isolation: isolate;
+}
+
+.backdropLayer,
+.assemblyLayer,
+.particlesLayer,
+.frameLayer {
+  position: absolute;
+  inset: 0;
+}
+
+.backdropLayer {
+  transform:
+    translate3d(calc(var(--pointer-x) * -10px), calc(var(--pointer-y) * -10px), 0)
+    scale(1.02);
+}
+
+.assemblyLayer {
+  transform:
+    translate3d(calc(var(--pointer-x) * 14px), calc(var(--pointer-y) * 14px), 0)
+    rotateX(calc(var(--pointer-y) * -4deg))
+    rotateY(calc(var(--pointer-x) * 4deg));
+  transform-style: preserve-3d;
+}
+
+.particlesLayer {
+  transform: translate3d(calc(var(--pointer-x) * 18px), calc(var(--pointer-y) * 18px), 0);
+}
+
+.frameLayer {
+  transform:
+    translate3d(calc(var(--pointer-x) * -6px), calc(var(--pointer-y) * -6px), 0);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.nebula,
+.grid,
+.scanSweep,
+.vignette,
+.edgeGlow {
+  position: absolute;
+  inset: 0;
+}
+
+.nebula {
+  background:
+    radial-gradient(circle at 34% 36%, rgba(83, 144, 217, 0.22), transparent 18%),
+    radial-gradient(circle at 50% 50%, rgba(128, 255, 219, 0.12), transparent 18%),
+    radial-gradient(circle at 68% 62%, rgba(94, 96, 206, 0.18), transparent 20%);
+  filter: blur(18px);
+  animation: nebulaPulse 9s ease-in-out infinite;
+}
+
+.grid {
+  inset: 8%;
+  border-radius: 28px;
+  background-image:
+    linear-gradient(rgba(128, 255, 219, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(128, 255, 219, 0.035) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: radial-gradient(circle at center, black 46%, transparent 86%);
+  opacity: 0.85;
+}
+
+.scanSweep {
+  background: linear-gradient(120deg, transparent 24%, rgba(128, 255, 219, 0.07) 50%, transparent 76%);
+  transform: translateX(-120%);
+  animation: sweep 7.5s ease-in-out infinite;
+}
+
+.vignette {
+  background:
+    radial-gradient(circle at center, transparent 44%, rgba(2, 8, 24, 0.32) 74%, rgba(2, 8, 24, 0.64) 100%);
+}
+
+.corner {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-color: rgba(128, 255, 219, 0.24);
+}
+
+.cornerTl {
+  top: 18px;
+  left: 18px;
+  border-top: 1px solid;
+  border-left: 1px solid;
+  border-top-left-radius: 16px;
+}
+
+.cornerTr {
+  top: 18px;
+  right: 18px;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-top-right-radius: 16px;
+}
+
+.cornerBr {
+  right: 18px;
+  bottom: 18px;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-bottom-right-radius: 16px;
+}
+
+.cornerBl {
+  bottom: 18px;
+  left: 18px;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  border-bottom-left-radius: 16px;
+}
+
+.frameBandTop,
+.frameBandBottom {
+  position: absolute;
+  left: 50%;
+  width: 132px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(128, 255, 219, 0.28), transparent);
+  transform: translateX(-50%);
+}
+
+.frameBandTop {
+  top: 28px;
+}
+
+.frameBandBottom {
+  bottom: 28px;
+}
+
+.ring,
+.beam,
+.sigil,
+.core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.ring {
+  border-radius: 50%;
+  border: 1px solid rgba(128, 255, 219, 0.08);
+  transform: translate(-50%, -50%);
+}
+
+.ringA {
+  width: 78%;
+  height: 58%;
+  animation: ringSpin 24s linear infinite;
+}
+
+.ringB {
+  width: 56%;
+  height: 78%;
+  border-color: rgba(72, 191, 227, 0.12);
+  animation: ringSpinReverse 18s linear infinite;
+}
+
+.ringC {
+  width: 92%;
+  height: 30%;
+  border-color: rgba(94, 96, 206, 0.14);
+  animation: ringSpin 32s linear infinite;
+}
+
+.ringD {
+  width: 34%;
+  height: 34%;
+  border-color: rgba(255, 184, 108, 0.16);
+  animation: ringSpinReverse 14s linear infinite;
+}
+
+.beam {
+  height: 1px;
+  border-radius: 999px;
+  opacity: 0.76;
+  transform-origin: center center;
+}
+
+.beamA {
+  width: 82%;
+  background: linear-gradient(90deg, transparent, rgba(128, 255, 219, 0.5), transparent);
+  transform: translate(-50%, -50%) rotate(18deg);
+}
+
+.beamB {
+  width: 68%;
+  background: linear-gradient(90deg, transparent, rgba(255, 184, 108, 0.42), transparent);
+  transform: translate(-50%, -50%) rotate(-38deg);
+}
+
+.beamC {
+  width: 54%;
+  background: linear-gradient(90deg, transparent, rgba(94, 96, 206, 0.34), transparent);
+  transform: translate(-50%, -50%) rotate(74deg);
+}
+
+.beamD {
+  width: 40%;
+  background: linear-gradient(90deg, transparent, rgba(128, 255, 219, 0.28), transparent);
+  transform: translate(-50%, -50%) rotate(-82deg);
+}
+
+.sigil {
+  width: 54%;
+  height: 54%;
+  transform: translate(-50%, -50%);
+  opacity: 0.28;
+  filter: drop-shadow(0 0 18px rgba(128, 255, 219, 0.12));
+  animation: sigilPulse 8.4s ease-in-out infinite;
+}
+
+.sigil circle,
+.sigil path {
+  fill: none;
+  stroke: rgba(128, 255, 219, 0.42);
+  stroke-width: 1.2;
+}
+
+.core {
+  z-index: 2;
+  width: 146px;
+  height: 146px;
+  transform: translate(-50%, -50%);
+}
+
+.coreHalo,
+.coreShell,
+.corePulse,
+.coreSpec {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.coreHalo {
+  inset: -14px;
+  border: 1px solid rgba(128, 255, 219, 0.18);
+  animation: ringSpin 20s linear infinite;
+}
+
+.coreShell {
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 28%, rgba(255, 255, 255, 0.78), transparent 22%),
+    radial-gradient(circle at center, rgba(128, 255, 219, 0.3), rgba(78, 168, 222, 0.42) 42%, rgba(6, 14, 34, 0.12) 74%, transparent 78%);
+  box-shadow:
+    0 0 40px rgba(78, 168, 222, 0.34),
+    0 0 84px rgba(128, 255, 219, 0.14);
+  animation: corePulse 5.8s ease-in-out infinite;
+}
+
+.corePulse {
+  inset: 20px;
+  border: 1px solid rgba(244, 251, 255, 0.18);
+  background: radial-gradient(circle, rgba(255, 184, 108, 0.24), transparent 62%);
+  animation: ringSpinReverse 13s linear infinite;
+}
+
+.coreSpec {
+  inset: 52px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.95), rgba(255, 184, 108, 0.24) 44%, transparent 74%);
+  filter: blur(1px);
+}
+
+.shard {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--w);
+  height: 16px;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.14), transparent 18%),
+    linear-gradient(90deg, rgba(128, 255, 219, 0.05), rgba(128, 255, 219, 0.5), rgba(255, 184, 108, 0.12));
+  clip-path: polygon(0 56%, 18% 10%, 82% 0, 100% 42%, 80% 100%, 20% 92%);
+  border: 1px solid rgba(128, 255, 219, 0.16);
+  box-shadow:
+    0 0 18px rgba(78, 168, 222, 0.18),
+    inset 0 0 10px rgba(255, 255, 255, 0.06);
+  opacity: 0.9;
+  transform: rotate(var(--angle));
+  animation: shardDrift 9s ease-in-out infinite;
+}
+
+.shard::before,
+.shard::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.shard::before {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.16) 46%, transparent 62%);
+  mix-blend-mode: screen;
+  opacity: 0.85;
+}
+
+.shard::after {
+  clip-path: polygon(8% 60%, 28% 18%, 48% 14%, 30% 74%);
+  background: rgba(255, 255, 255, 0.22);
+  opacity: 0.55;
+}
+
+.dust {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  border: 1px solid rgba(128, 255, 219, 0.05);
+  opacity: 0.5;
+  animation: dustFloat 15s ease-in-out infinite alternate;
+}
+
+.spark {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: 3px;
+  height: 3px;
+  border-radius: 999px;
+  background: rgba(244, 251, 255, 0.94);
+  box-shadow: 0 0 10px rgba(128, 255, 219, 0.45);
+  animation: sparkBlink 5.5s ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+
+.edgeGlow {
+  z-index: 4;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 50%, transparent 58%, rgba(128, 255, 219, 0.06) 76%, transparent 88%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 12%, transparent 88%, rgba(128, 255, 219, 0.04));
+}
+
+@keyframes corePulse {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: saturate(1);
+  }
+  50% {
+    transform: scale(1.06);
+    filter: saturate(1.18);
+  }
+}
+
+@keyframes nebulaPulse {
+  0%,
+  100% {
+    transform: scale(0.98);
+    opacity: 0.66;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 0.96;
+  }
+}
+
+@keyframes sigilPulse {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: translate(-50%, -50%) scale(0.98);
+  }
+  50% {
+    opacity: 0.38;
+    transform: translate(-50%, -50%) scale(1.02);
+  }
+}
+
+@keyframes sweep {
+  0% {
+    transform: translateX(-120%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+@keyframes ringSpin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes ringSpinReverse {
+  from {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+@keyframes shardDrift {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(var(--angle));
+  }
+  50% {
+    transform: translate(var(--drift-x), var(--drift-y)) rotate(calc(var(--angle) + 10deg));
+  }
+}
+
+@keyframes dustFloat {
+  from {
+    transform: translate(0, 0) scale(0.96);
+  }
+  to {
+    transform: translate(var(--drift-x), var(--drift-y)) scale(1.06);
+  }
+}
+
+@keyframes sparkBlink {
+  0%,
+  100% {
+    opacity: 0.24;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.35);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .card {
+    min-height: 24rem;
+    border-radius: 28px;
+  }
+
+  .core {
+    width: 122px;
+    height: 122px;
+  }
+
+  .sigil {
+    width: 62%;
+    height: 62%;
+  }
+
+  .shard {
+    height: 14px;
+  }
+}
