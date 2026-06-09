@@ -10,15 +10,7 @@ import { Projects } from "./components/Projects/Projects";
 function App() {
   return (
     <div className={styles.App}>
-      <CosmicBackground />
-      <div className={styles.content}>
-        <Navbar />
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Contact />
-      </div>
+
     </div>
   );
 }
