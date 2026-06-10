@@ -40,6 +40,7 @@ export function About() {
             <li><a href="https://www.goodreads.com/book/show/41886271-the-sword-of-kaigen" target="_blank" rel="noreferrer">The Sword of Kaigen</a></li>
             <li><a href="https://www.goodreads.com/book/show/77566.Hyperion" target="_blank" rel="noreferrer">Hyperion</a></li>
             <li><a href="https://www.goodreads.com/en/book/show/36454667-empire-of-silence" target="_blank" rel="noreferrer">Empire of Silence</a></li>
+            <li><a href="https://www.goodreads.com/series/309211-dungeon-crawler-carl">Dungeon Crawler Carl</a></li>
           </ul>
         </div>
 

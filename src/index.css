@@ -48,6 +48,15 @@ body {
   overflow: hidden;
 }
 
+/* Hide scrollbars everywhere, keep scrolling functional */
+* {
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;   /* IE / Edge */
+}
+*::-webkit-scrollbar {
+  display: none;               /* Chrome / Safari */
+}
+
 /* ── Paper texture overlay (light only) ── */
 [data-theme="light"] body::before {
   content: "";
