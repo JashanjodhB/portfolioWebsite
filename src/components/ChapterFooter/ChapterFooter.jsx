@@ -13,7 +13,7 @@ const SOCIAL = [
 
 const CHAPTERS = [
   { num: "I",   label: "About",    page: "about" },
-  { num: "II",  label: "Research", page: "research" },
+  { num: "II",  label: "Work", page: "work" },
   { num: "III", label: "Portfolio",     page: "portfolio" },
   { num: "IV",  label: "Contact",  page: "contact" },
 ];
