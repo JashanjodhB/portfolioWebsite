@@ -1,17 +1,41 @@
-import styles from "./App.module.css";
-import { About } from "./components/About/About";
-import { CosmicBackground } from "./components/CosmicBackground/CosmicBackground";
-import { Contact } from "./components/Contact/Contact";
-import { Experience } from "./components/Experience/Experience";
-import { Hero } from "./components/Hero/Hero";
-import { Navbar } from "./components/Navbar/Navbar";
-import { Projects } from "./components/Projects/Projects";
+import { useRef } from "react";
+import { ThemeProvider } from "./context/ThemeContext";
+import { NavigationProvider, useNavigation } from "./context/NavigationContext";
+import { StarBackground } from "./components/StarBackground/StarBackground";
+import { PageFold } from "./components/PageFold/PageFold";
+import { Landing } from "./components/sections/Landing";
+import { About } from "./components/sections/About";
+import { Work } from "./components/sections/Work";
+import { Portfolio } from "./components/sections/Portfolio";
+import { Contact } from "./components/sections/Contact";
+
+const PAGE_MAP = {
+  landing:  <Landing />,
+  about:    <About />,
+  work: <Work />,
+  portfolio: <Portfolio />,
+  contact:  <Contact />,
+};
+
+function Pages() {
+  const { currentPage } = useNavigation();
+
+  return (
+    <main key={currentPage} className="pageEnter">
+      {PAGE_MAP[currentPage]}
+    </main>
+  );
+}
 
 function App() {
   return (
-    <div className={styles.App}>
-
-    </div>
+    <ThemeProvider>
+      <NavigationProvider>
+        <StarBackground />
+        <PageFold />
+        <Pages />
+      </NavigationProvider>
+    </ThemeProvider>
   );
 }
 

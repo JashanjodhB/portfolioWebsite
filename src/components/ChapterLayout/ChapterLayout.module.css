@@ -1,0 +1,66 @@
+.page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  padding: 3.5rem 1.5rem 0;
+  overflow-y: auto;
+}
+
+.inner {
+  width: min(680px, 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Chapter header ── */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  margin-bottom: 2.5rem;
+}
+
+.chapterLabel {
+  font-family: "Risque", serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding-bottom: 1rem;
+}
+
+.title {
+  font-family: "Meddon", cursive;
+  font-size: clamp(2.8rem, 7vw, 4.5rem);
+  color: var(--text);
+  line-height: 1.05;
+}
+
+.rule {
+  width: 48px;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.5;
+  margin-top: 0.6rem;
+}
+
+/* ── Body content ── */
+.body {
+  flex: 1;
+  color: var(--text);
+  line-height: 1.8;
+}
+
+/* First-word enlargement utility — wrap first word in <span className="firstWord"> */
+:global(.firstWord) {
+  font-family: "Meddon", cursive;
+  font-size: 2.2em;
+  line-height: 0.9;
+  float: left;
+  margin-right: 0.12em;
+  margin-top: 0.08em;
+  color: var(--accent);
+}

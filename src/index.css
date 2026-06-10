@@ -1,0 +1,97 @@
+/* ── Design tokens ── */
+:root {
+  --accent: #1e40af;
+  --accent-hover: #1d4ed8;
+}
+
+[data-theme="dark"] {
+  --bg: #080c18;
+  --bg-secondary: #0f1629;
+  --text: #f0f4ff;
+  --text-muted: #8b9abf;
+  --border: rgba(255, 255, 255, 0.08);
+  --card-bg: rgba(255, 255, 255, 0.04);
+  --fold-back: #1a2540;
+  --fold-page: #0f1629;
+  --fold-text: #8b9abf;
+}
+
+[data-theme="light"] {
+  --bg: #f5f0e8;
+  --bg-secondary: #ede8de;
+  --text: #1a1a1a;
+  --text-muted: #555;
+  --border: rgba(0, 0, 0, 0.1);
+  --card-bg: rgba(255, 255, 255, 0.55);
+  --fold-back: #d9cfc0;
+  --fold-page: #ede8de;
+  --fold-text: #888;
+}
+
+/* ── Reset & base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: "Risque", serif;
+  color: var(--text);
+  background-color: var(--bg);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow: hidden;
+}
+
+/* ── Paper texture overlay (light only) ── */
+[data-theme="light"] body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.45;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ── Typography ── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Meddon", cursive;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+p, span, li, label, input, textarea, button {
+  font-family: "Risque", serif;
+}
+
+/* ── Page transition ── */
+@keyframes pageEnter {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pageEnterBack {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.pageEnter     { animation: pageEnter     0.35s ease forwards; }
+.pageEnterBack { animation: pageEnterBack 0.35s ease forwards; }
+
+/* ── Utilities ── */
+.accent { color: var(--accent); }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover { color: var(--accent-hover); }
+
+#root { position: relative; }

@@ -1,0 +1,104 @@
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 2rem 0 1.5rem;
+}
+
+.divider {
+  width: 56px;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.4;
+}
+
+/* ── Social links ── */
+.socialRow {
+  display: flex;
+  gap: 2rem;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: "Risque", serif;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.socialLink:hover {
+  color: var(--accent);
+}
+
+/* ── Controls row ── */
+.controlsRow {
+  display: flex;
+  gap: 1rem;
+}
+
+.ctrlBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.75rem;
+  font-family: "Risque", serif;
+  letter-spacing: 0.06em;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.ctrlBtn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ── Mini TOC row ── */
+.tocRow {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.tocEntry {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-family: "Risque", serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+  padding: 0;
+}
+
+.tocEntry:hover {
+  color: var(--accent);
+}
+
+.tocActive {
+  color: var(--accent);
+  pointer-events: none;
+}
+
+.tocNum {
+  font-family: "Meddon", cursive;
+  font-size: 0.85rem;
+  color: var(--accent);
+  opacity: 0.7;
+}
+
+.tocActive .tocNum {
+  opacity: 1;
+}

@@ -1,0 +1,23 @@
+.starField {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+[data-theme="light"] .starField {
+  display: none;
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background: #ffffff;
+  animation: twinkle ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+  from { opacity: var(--star-opacity, 0.3); transform: scale(1); }
+  to   { opacity: 1; transform: scale(1.3); }
+}

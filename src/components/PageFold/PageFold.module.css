@@ -1,0 +1,88 @@
+/* ── Next page fold — top right ── */
+.foldNext {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 300;
+  width: 72px;
+  height: 72px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.foldNext::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 72px 72px 0;
+  border-color: transparent var(--fold-back) transparent transparent;
+  filter: drop-shadow(-3px 3px 5px rgba(0, 0, 0, 0.22));
+  transition: border-width 0.3s ease;
+}
+
+.foldNext::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 72px 72px 0 0;
+  border-color: var(--fold-page) transparent transparent transparent;
+  transition: border-width 0.3s ease;
+}
+
+.foldNext:hover::before { border-width: 0 100px 100px 0; }
+.foldNext:hover::after  { border-width: 100px 100px 0 0; }
+
+/* ── Prev page fold — bottom left ── */
+.foldPrev {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 300;
+  width: 72px;
+  height: 72px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.foldPrev::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 72px 0 0 72px;
+  border-color: transparent transparent transparent var(--fold-back);
+  filter: drop-shadow(3px -3px 5px rgba(0, 0, 0, 0.22));
+  transition: border-width 0.3s ease;
+}
+
+.foldPrev::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 72px 72px;
+  border-color: transparent transparent var(--fold-page) transparent;
+  transition: border-width 0.3s ease;
+}
+
+.foldPrev:hover::before { border-width: 100px 0 0 100px; }
+.foldPrev:hover::after  { border-width: 0 0 100px 100px; }

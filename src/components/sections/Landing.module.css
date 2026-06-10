@@ -1,0 +1,136 @@
+.landing {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.page {
+  width: min(560px, 88vw);
+  padding: 3.5rem 3.5rem;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  box-shadow:
+    4px 4px 0 var(--page-shadow),
+    8px 8px 0 var(--page-shadow-far);
+}
+
+[data-theme="dark"] .page {
+  --page-shadow: rgba(255,255,255,0.03);
+  --page-shadow-far: rgba(255,255,255,0.015);
+}
+[data-theme="light"] .page {
+  --page-shadow: rgba(0,0,0,0.07);
+  --page-shadow-far: rgba(0,0,0,0.035);
+}
+
+.title {
+  font-family: "Meddon", cursive;
+  font-size: clamp(2rem, 5.5vw, 3.5rem);
+  color: var(--text);
+  text-align: center;
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-family: "Risque", serif;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.divider {
+  width: 56px;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+.tocHeader {
+  font-family: "Risque", serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  align-self: flex-start;
+}
+
+.tocList {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.tocItem { width: 100%; }
+
+.tocBtn {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+  padding: 0.25rem 0;
+  transition: color 0.2s;
+  gap: 0.5rem;
+}
+
+.tocBtn:hover { color: var(--accent); }
+
+.chapterNum {
+  font-family: "Meddon", cursive;
+  font-size: 1rem;
+  color: var(--accent);
+  width: 2.2rem;
+  flex-shrink: 0;
+  text-align: left;
+  padding-right: 3.5rem;
+}
+
+.chapterTitle {
+  font-family: "Risque", serif;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.leaders {
+  flex: 1;
+  display: block;
+  border-bottom: 1px dotted var(--border);
+  margin: 0 0.4rem;
+  transform: translateY(-3px);
+  opacity: 0.55;
+}
+
+/* ── Theme toggle at bottom ── */
+.themeToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.themeToggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
