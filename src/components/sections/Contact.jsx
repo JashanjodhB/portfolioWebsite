@@ -36,7 +36,7 @@ export function Contact() {
     <ChapterLayout chapterNum="IV" title="Contact">
       <div className={styles.body}>
         <p className={styles.intro}>
-          Have a question, opportunity, or just want to say hello? Send a message and I'll get back to you.
+          Want to get in touch? Send a message below or reach out via email at my <a href="mailto:jashanjodhb@gmail.com">Email</a> or <a href="https://www.linkedin.com/in/jashanjodh-bajwa/" target="_blank" rel="noreferrer">LinkedIn</a>.
         </p>
 
         {status === "success" ? (
