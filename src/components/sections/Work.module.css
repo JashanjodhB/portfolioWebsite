@@ -1,0 +1,65 @@
+.body {
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* ── Work entry ── */
+.entry {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px dotted var(--border);
+}
+
+.entry:last-child {
+  border-bottom: none;
+}
+
+.entryImg {
+  width: 100%;
+  max-height: 160px;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid var(--border);
+  filter: grayscale(20%);
+}
+
+.entryText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.company {
+  font-family: "Meddon", cursive;
+  font-size: 1.8rem;
+  line-height: 1.1;
+}
+
+.company a {
+  color: var(--text);
+  transition: color 0.2s;
+}
+
+.company a:hover {
+  color: var(--accent);
+}
+
+.role {
+  font-family: "Risque", serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+.entryText p:last-child {
+  font-family: "Risque", serif;
+  font-size: 0.9rem;
+  line-height: 1.85;
+  color: var(--text);
+}
