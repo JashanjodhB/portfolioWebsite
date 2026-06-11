@@ -1,7 +1,7 @@
 import { useNavigation } from "../../context/NavigationContext";
 import { useTheme } from "../../context/ThemeContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { faSun, faMoon, faTerminal } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Landing.module.css";
 
 const CHAPTERS = [
@@ -19,7 +19,6 @@ export function Landing() {
     <section className={styles.landing}>
       <div className={styles.page}>
         <h1 className={styles.title}>Jashanjodh Bajwa</h1>
-        <p className={styles.subtitle}>Written in Code</p>
         <div className={styles.divider} />
 
         <p className={styles.tocHeader}>Table of Contents</p>
@@ -40,13 +39,22 @@ export function Landing() {
 
         <div className={styles.divider} />
 
-        <button
-          className={styles.themeToggle}
-          onClick={toggleTheme}
-          aria-label="Toggle theme"
-        >
-          <FontAwesomeIcon icon={theme === "dark" ? faSun : faMoon} />
-        </button>
+        <div className={styles.controls}>
+          <button
+            className={styles.themeToggle}
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+          >
+            <FontAwesomeIcon icon={theme === "dark" ? faSun : faMoon} />
+          </button>
+          <button
+            className={styles.themeToggle}
+            onClick={() => goTo("terminal")}
+            aria-label="Switch to terminal view"
+          >
+            <FontAwesomeIcon icon={faTerminal} />
+          </button>
+        </div>
       </div>
     </section>
   );

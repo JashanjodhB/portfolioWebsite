@@ -9,6 +9,8 @@ export function PageFold() {
   const nextPage = capitalize(PAGES[currentIndex + 1]);
   const prevPage = capitalize(PAGES[currentIndex - 1]);
 
+  if (currentPage === "terminal") return null;
+
   return (
     <nav className={styles.nav}>
       <div className={styles.slot}>

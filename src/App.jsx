@@ -8,6 +8,7 @@ import { About } from "./components/sections/About";
 import { Work } from "./components/sections/Work";
 import { Portfolio } from "./components/sections/Portfolio";
 import { Contact } from "./components/sections/Contact";
+import { Terminal } from "./components/sections/Terminal";
 
 const PAGE_MAP = {
   landing:  <Landing />,
@@ -15,6 +16,7 @@ const PAGE_MAP = {
   work: <Work />,
   portfolio: <Portfolio />,
   contact:  <Contact />,
+  terminal: <Terminal />,
 };
 
 function Pages() {
