@@ -1,21 +1,16 @@
 .terminal {
-  height: 100vh;
+  min-height: 100vh;
   background: #0d0d0d;
   color: #00ff41;
   font-family: "Courier New", Courier, monospace;
   font-size: 0.9rem;
-  display: flex;
-  flex-direction: column;
   padding: 1.5rem;
   box-sizing: border-box;
+  overflow-y: auto;
 }
 
-.output {
-  flex: 1;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+.entry {
+  margin-bottom: 0.6rem;
 }
 
 .prompt {
@@ -30,7 +25,6 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 0.8rem;
 }
 
 .caret {
@@ -43,8 +37,13 @@
   background: none;
   border: none;
   outline: none;
-  color: #00ff41;
+  color: inherit;
   font-family: inherit;
   font-size: inherit;
-  caret-color: #00ff41;
+  caret-color: currentColor;
+}
+
+.input::placeholder {
+  color: inherit;
+  opacity: 0.35;
 }
