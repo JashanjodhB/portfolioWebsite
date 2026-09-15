@@ -12,10 +12,12 @@ export function Work() {
             <h2 className={styles.company}>
               <a href="https://www.plains.com" target="_blank" rel="noreferrer">Plains All American</a>
             </h2>
-            <p className={styles.role}>Data Engineering Intern</p>
+            <p className={styles.role}>Data Engineering Intern &middot; May 2026 &ndash; Aug 2026</p>
             <p>
-              I am currently working as a Data Engineering Intern at Plains All American.
-              I have been involved in building data pipelines, optimizing apps, implementing features for internal tools, and exploring new technologies.
+              I worked as a Data Engineering Intern at Plains All American.
+              I built and shipped several full-stack, AI-integrated systems, including a pipeline that queries AI models
+              and visualizes results in a web app, production features for an internal AI assistant used by 300+ employees,
+              and automation that monitors external sources for regulatory changes and generates structured reports.
             </p>
           </div>
         </div>
